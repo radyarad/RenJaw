@@ -2,6 +2,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Lato, Racing_Sans_One } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -14,15 +15,19 @@ const racing = Racing_Sans_One({
 });
 
 export default function Navbar() {
+  const router = useRouter();
+  const handleLogin = () => {
+    router.push("/login");
+  };
   const pathname = usePathname();
   const { data: session, status } = useSession();
 
   return (
-    <nav className="flex items-center justify-between px-5 py-2 bg-white">
+    <nav className="relative z-50 flex items-center justify-between px-5 py-2 bg-white">
       {/* Kiri: logo/brand */}
       <div className={`${racing.className} p-4 flex items-center text-2xl`}>
         <h1 className="text-black text-1xl">Renta</h1>
-        <h1 className="text-red-600 text-1xl">.co</h1>
+        <h1 className="text-[#D80032] text-1xl">.co</h1>
       </div>
 
       {/* Tengah: menu */}
@@ -32,7 +37,7 @@ export default function Navbar() {
         <Link href="/">
           <li
             className={`mr-6 ${
-              pathname === "/" ? "text-red-600" : "text-black"
+              pathname === "/" ? "text-[#D80032]" : "text-black"
             } cursor-pointer`}
           >
             Home
@@ -41,19 +46,19 @@ export default function Navbar() {
         <Link href="/about">
           <li
             className={`mr-6 ${
-              pathname === "/about" ? "text-red-600" : "text-black"
+              pathname === "/about" ? "text-[#D80032]" : "text-black"
             } cursor-pointer`}
           >
-            About
+            View Car
           </li>
         </Link>
         <Link href="/about/profile">
           <li
             className={`mr-6 ${
-              pathname === "/about/profile" ? "text-red-600" : "text-black"
+              pathname === "/about/profile" ? "text-[#D80032]" : "text-black"
             } cursor-pointer`}
           >
-            Profile
+            Order
           </li>
         </Link>
       </ul>
@@ -71,14 +76,14 @@ export default function Navbar() {
           </div>
         ) : (
           <button
-            className="bg-white border border-red-600 px-2 text-red-600 text-sm h-7 cursor-pointer"
-            onClick={() => signIn()}
+            className="bg-white border border-[#D80032] px-4 text-red-600 text-sm h-7 cursor-pointer"
+            onClick={() => handleLogin()}
           >
             login
           </button>
         )}
         <button
-          className="bg-red-600 border border-red-600 px-2 text-white text-sm h-7 cursor-pointer"
+          className="bg-[#D80032] border border-[#D80032] px-2 text-white text-sm h-7 cursor-pointer"
           onClick={() => signIn()}
         >
           SignUp

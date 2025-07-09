@@ -5,7 +5,7 @@ const racing = Racing_Sans_One({
   subsets: ["latin"],
   weight: ["400"],
 });
-
+        
 const lato = Lato({
   subsets: ["latin"],
   weight: ["400"],

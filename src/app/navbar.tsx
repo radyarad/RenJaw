@@ -22,7 +22,7 @@ export default function Navbar() {
       {/* Kiri: logo/brand */}
       <div className={`${racing.className} p-4 flex items-center text-2xl`}>
         <h1 className="text-black text-1xl">Renta</h1>
-        <h1 className="text-red-600 text-1xl">.co</h1>
+        <h1 className="text-[#D80032] text-1xl">.co</h1>
       </div>
 
       {/* Tengah: menu */}
@@ -71,14 +71,14 @@ export default function Navbar() {
           </div>
         ) : (
           <button
-            className="bg-white border border-red-600 px-2 text-red-600 text-sm h-7 cursor-pointer"
+            className="bg-white border border-[#D80032] px-2 text-[#D80032] text-sm h-7 cursor-pointer"
             onClick={() => signIn()}
           >
             login
           </button>
         )}
         <button
-          className="bg-red-600 border border-red-600 px-2 text-white text-sm h-7 cursor-pointer"
+          className="bg-[#D80032] border border-[#D80032] px-2 text-white text-sm h-7 cursor-pointer"
           onClick={() => signIn()}
         >
           SignUp

@@ -32,8 +32,7 @@ export default function Navbar() {
 
       {/* Tengah: menu */}
       <ul
-        className={`${lato.className} absolute left-1/2 -translate-x-1/2 flex space-x-1`}
-      >
+        className={`${lato.className} absolute left-1/2 -translate-x-1/2 flex space-x-1`}>
         <Link href="/">
           <li
             className={`mr-6 ${

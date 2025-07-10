@@ -32,7 +32,8 @@ export default function Navbar() {
 
       {/* Tengah: menu */}
       <ul
-        className={`${lato.className} absolute left-1/2 -translate-x-1/2 flex space-x-1`}>
+        className={`${lato.className} absolute left-1/2 -translate-x-1/2 flex space-x-1`}
+      >
         <Link href="/">
           <li
             className={`mr-6 ${
@@ -42,10 +43,10 @@ export default function Navbar() {
             Home
           </li>
         </Link>
-        <Link href="/about">
+        <Link href="/cars">
           <li
             className={`mr-6 ${
-              pathname === "/about" ? "text-[#D80032]" : "text-black"
+              pathname === "/cars" ? "text-[#D80032]" : "text-black"
             } cursor-pointer`}
           >
             View Car

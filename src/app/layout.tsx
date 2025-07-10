@@ -3,7 +3,7 @@
 import "./globals.css";
 
 import { Lato } from "next/font/google";
-import Navbar from "./navbar";
+import Navbar from "../components/layout/navbar";
 
 import { usePathname } from "next/navigation";
 import { SessionProvider } from "next-auth/react";

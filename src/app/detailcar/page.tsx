@@ -13,7 +13,7 @@ export default function detailcar(){
         <main>
             <div className="flex flex-row px-15 py-10">
                 <form>
-                    <div className="realtive w-1/2 bg-[#F2F2F2] p-10 w-[610px] h-[390px]">
+                    <div className="relative w-1/2 bg-[#F2F2F2] p-10 w-[610px] h-[390px]">
                         <div className="relative w-1/2 top-[30%] inset-x-0 left-65 transform -translate-x-1/2 flex item-center">
                             <Image src="/mercedes.svg" alt="icon" width={700} height={200} className="object-contain scale-195"/>
                         </div>
@@ -28,7 +28,7 @@ export default function detailcar(){
                                 <p className={`${lato.className} text-xl text-[#737373] mx-2 mb-6`}>Bandung</p>
                             </div>
                         <div className="flex flex-col">
-                            <div    >
+                            <div>
                                 <div className="flex flex-row items-baseline">
                                     <p className={`${lato.className} text-4xl font-bold text-black mb-9`}>$132</p>
                                     <p className={`${lato.className} text-1xl text-[#737373]`}>/Day</p>

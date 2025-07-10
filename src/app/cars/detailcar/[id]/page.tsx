@@ -1,5 +1,6 @@
-import { Lato } from "next/font/google"
-import Image from "next/image"
+
+import { Lato } from "next/font/google";
+import Image from "next/image";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { LuPhone } from "react-icons/lu";
 
